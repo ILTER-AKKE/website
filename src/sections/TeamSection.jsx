@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import TeamCard from '../components/TeamCard'
-import { teamMembers } from '../data/team'
+import { teamMembers, supervisor, juries } from '../data/team'
 
 const TeamSection = () => {
   const prefersReducedMotion = useReducedMotion()
@@ -69,8 +69,86 @@ const TeamSection = () => {
                 delay={index * 0.1}
               />
             </motion.div>
-          ))}
-        </motion.div>
+         ))}
+       </motion.div>
+
+       {/* Supervisor & Juries */}
+       <motion.div
+         initial={{ opacity: 0, y: 30 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true }}
+         transition={{ duration: 0.8, delay: 0.3 }}
+         className="mt-16 lg:mt-20"
+       >
+         <h3 className="text-2xl lg:text-3xl font-bold text-dark-900 dark:text-white text-center mb-12">
+           Supervisor & Juries
+         </h3>
+         
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+           {/* First Jury */}
+           <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.5 }}
+             className="bg-white dark:bg-dark-900 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
+           >
+             <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+               </svg>
+             </div>
+             <h4 className="text-lg font-semibold text-dark-900 dark:text-white mb-1">
+               {juries[0].name}
+             </h4>
+             <p className="text-sm text-primary-600 dark:text-primary-400">
+               {juries[0].role}
+             </p>
+           </motion.div>
+
+           {/* Supervisor (Center) */}
+           <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.5, delay: 0.1 }}
+             className="bg-white dark:bg-dark-900 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 text-center border-2 border-primary-600"
+           >
+             <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+               </svg>
+             </div>
+             <h4 className="text-lg font-semibold text-dark-900 dark:text-white mb-1">
+               {supervisor.name}
+             </h4>
+             <p className="text-sm text-primary-600 dark:text-primary-400">
+               {supervisor.role}
+             </p>
+           </motion.div>
+
+           {/* Second Jury */}
+           <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.5, delay: 0.2 }}
+             className="bg-white dark:bg-dark-900 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
+           >
+             <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+               </svg>
+             </div>
+             <h4 className="text-lg font-semibold text-dark-900 dark:text-white mb-1">
+               {juries[1].name}
+             </h4>
+             <p className="text-sm text-primary-600 dark:text-primary-400">
+               {juries[1].role}
+             </p>
+           </motion.div>
+         </div>
+       </motion.div>
       </div>
     </section>
   )

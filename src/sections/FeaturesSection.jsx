@@ -33,11 +33,6 @@ const FeaturesSection = () => {
       description: 'Natural text-to-speech conversion provides clear audio output for seamless communication.',
     },
     {
-      icon: '🔋',
-      title: 'Battery life',
-      description: 'Extended battery performance ensures all-day usage without frequent recharging.',
-    },
-    {
       icon: '📡',
       title: 'Connectivity',
       description: 'Reliable Bluetooth connection maintains stable communication between glove and mobile device.',
