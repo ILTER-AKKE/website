@@ -9,24 +9,24 @@ const HowItWorksSection = () => {
 
   const steps = [
     {
-      title: 'Connect & Setup',
-      description: 'Simply connect your SL-Glove to your device via Bluetooth or USB. Our intuitive setup wizard guides you through the initial configuration in under 2 minutes.',
-      details: 'Compatible with Windows, macOS, iOS, and Android devices. No complex drivers or software installation required.',
+      title: 'Open App & Connect',
+      description: 'Put on your SL-Glove and open the mobile application. The glove connects via Bluetooth 5.0 to your iOS or Android device instantly.',
+      details: 'The wearable glove is equipped with motion, flex, and pressure sensors paired with an embedded microcontroller for real-time data processing.',
     },
     {
-      title: 'Calibrate Gestures',
-      description: 'The glove learns your unique hand movements through a quick calibration process. This ensures maximum accuracy for gesture recognition.',
-      details: 'Our AI adapts to your individual hand size, flexibility, and movement patterns for personalized recognition.',
+      title: 'Initiate Call',
+      description: 'Select the contact you want to call from your app. The system initiates a voice call seamlessly through your phone network.',
+      details: 'No special equipment needed for the other party - they receive a regular phone call and can speak normally.',
     },
     {
-      title: 'Start Learning',
-      description: 'Begin your interactive learning journey with gesture-controlled lessons. The glove provides real-time feedback and guidance as you progress.',
-      details: 'Choose from hundreds of pre-loaded lessons or create custom learning paths tailored to your educational goals.',
+      title: 'Sign Language to Speech',
+      description: 'Use Turkish Sign Language gestures with your glove. The AI model recognizes your signs, converts them to text, and synthesizes natural speech in real-time.',
+      details: 'Machine learning models trained on TİD datasets translate approximately 50 gestures with 75-80% accuracy, continuously improving through use.',
     },
     {
-      title: 'Track Progress',
-      description: 'Monitor your learning progress with detailed analytics and insights. See how your skills improve over time with visual progress tracking.',
-      details: 'Get personalized recommendations for improvement and celebrate milestones as you advance through your learning journey.',
+      title: 'Speech to Animation',
+      description: 'When the other person speaks, the app processes their voice and displays corresponding Turkish Sign Language animations on your screen.',
+      details: 'Real-time audio processing ensures a seamless, two-way conversation experience with minimal latency.',
     },
   ]
 
@@ -66,7 +66,7 @@ const HowItWorksSection = () => {
           </h2>
           
           <p className="text-body text-dark-600 dark:text-dark-300 max-w-3xl mx-auto text-balance">
-            Getting started with SL-Glove is incredibly simple. Follow these four easy steps to begin your smart learning journey.
+            SL-Glove enables real-time, two-way communication during phone calls. Here's how the system works from connection to conversation.
           </p>
         </motion.div>
 
@@ -146,7 +146,7 @@ const HowItWorksSection = () => {
                         <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
                         </svg>
-                        <p className="text-lg font-semibold">Bluetooth Connected</p>
+                        <p className="text-lg font-semibold">Glove Connected</p>
                       </motion.div>
                     )}
                     
@@ -158,7 +158,7 @@ const HowItWorksSection = () => {
                         <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                         </svg>
-                        <p className="text-lg font-semibold">Calibrating...</p>
+                        <p className="text-lg font-semibold">Call Initiated</p>
                       </motion.div>
                     )}
                     
@@ -170,7 +170,7 @@ const HowItWorksSection = () => {
                         <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
-                        <p className="text-lg font-semibold">Learning Active</p>
+                        <p className="text-lg font-semibold">Translating Signs</p>
                       </motion.div>
                     )}
                     
@@ -182,7 +182,7 @@ const HowItWorksSection = () => {
                         <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                         </svg>
-                        <p className="text-lg font-semibold">Progress: 85%</p>
+                        <p className="text-lg font-semibold">Speech Processing</p>
                       </motion.div>
                     )}
                   </motion.div>
@@ -199,17 +199,17 @@ const HowItWorksSection = () => {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-dark-600 dark:text-dark-300">Calibration</span>
+                    <span className="text-sm font-medium text-dark-600 dark:text-dark-300">Call Status</span>
                     <div className="flex items-center space-x-2">
                       <div className={`w-2 h-2 rounded-full ${currentStep >= 1 ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`} />
                       <span className={`text-xs ${currentStep >= 1 ? 'text-green-600 dark:text-green-400' : 'text-gray-500'}`}>
-                        {currentStep >= 1 ? 'Complete' : 'Pending'}
+                        {currentStep >= 1 ? 'Active' : 'Pending'}
                       </span>
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-dark-600 dark:text-dark-300">Learning Mode</span>
+                    <span className="text-sm font-medium text-dark-600 dark:text-dark-300">AI Translation</span>
                     <div className="flex items-center space-x-2">
                       <div className={`w-2 h-2 rounded-full ${currentStep >= 2 ? 'bg-blue-500 animate-pulse' : 'bg-gray-300'}`} />
                       <span className={`text-xs ${currentStep >= 2 ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500'}`}>
