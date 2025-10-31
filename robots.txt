@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourusername.github.io/sl-glove-website/sitemap.xml
+Sitemap: https://yourusername.github.io/AKKE-website/sitemap.xml
