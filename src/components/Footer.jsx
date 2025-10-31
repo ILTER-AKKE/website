@@ -58,12 +58,12 @@ const Footer = () => {
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">SL</span>
+                  <span className="text-white font-bold text-lg">AK</span>
                 </div>
-                <span className="text-xl font-bold">SL-Glove</span>
+                <span className="text-xl font-bold">AKKE</span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed max-w-md">
-                An AI-powered wearable system designed to enable real-time communication for hearing and speech-impaired individuals.
+                Smart Command and Control Glove for silent, secure, real-time team communications over encrypted links and FM radio.
               </p>
             </motion.div>
 
@@ -127,7 +127,7 @@ const Footer = () => {
           className="py-6 border-t border-dark-700 flex flex-col sm:flex-row justify-between items-center"
         >
           <p className="text-gray-400 text-sm">
-            © {currentYear} SL-Glove. All rights reserved.
+            © {currentYear} AKKE. All rights reserved.
           </p>
           <div className="flex items-center space-x-6 mt-4 sm:mt-0">
             <span className="text-gray-400 text-sm">Bridging communication barriers</span>

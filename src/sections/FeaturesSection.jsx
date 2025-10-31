@@ -9,33 +9,33 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: '👋',
-      title: 'Gesture recognition',
-      description: 'SL Glove interprets intricate hand movements instantly using advanced sensors and AI-powered pattern recognition.',
+      title: 'Real-time gesture recognition',
+      description: 'Detects predefined hand signals instantly using flex and IMU sensors with on-device ML.',
     },
     {
       icon: '🤖',
-      title: 'AI-based translation',
-      description: 'Accurately converts sign language gestures to spoken words or text, streaming to your mobile in real time.',
+      title: 'AI-based classification',
+      description: 'On-board model classifies gestures and triggers the corresponding command category.',
     },
     {
       icon: '📱',
-      title: 'Mobile integration',
-      description: 'Seamless connectivity with Android and iOS devices enables accessible communication anytime and anywhere.',
+      title: 'No line-of-sight',
+      description: 'Teams communicate without visual contact thanks to RF/FM transmission.',
     },
     {
       icon: '⚡',
-      title: 'Real-time processing',
-      description: 'Low-latency gesture recognition and translation for natural, uninterrupted conversations.',
+      title: 'Low latency',
+      description: 'Command delivery under 100 ms for real-time operations.',
     },
     {
       icon: '🔊',
-      title: 'Voice feedback',
-      description: 'Natural text-to-speech conversion provides clear audio output for seamless communication.',
+      title: 'Audio notifications',
+      description: 'Plays pre-recorded voice prompts from microSD and sends them to radios.',
     },
     {
       icon: '📡',
-      title: 'Connectivity',
-      description: 'Reliable Bluetooth connection maintains stable communication between glove and mobile device.',
+      title: 'Secure communications',
+      description: 'Encrypted wireless channel; FM transmitter for broadcast to standard radios.',
     },
   ]
 

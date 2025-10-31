@@ -8,28 +8,36 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: 'What is SL-Glove?',
-      answer: 'SL-Glove is a wearable smart glove and mobile application system designed to enable real-time, two-way communication between hearing-impaired and non-hearing individuals. It translates Turkish Sign Language (TID) gestures into text and natural voice during phone calls, and converts incoming speech into animated TID visuals on the user\'s screen.'
+      question: 'What is AKKE?',
+      answer: 'AKKE (Smart Command and Control Glove) is a wearable hand‑signal recognition system enabling silent, secure, real‑time team communication for tactical, rescue, and industrial operations.'
     },
     {
-      question: 'How does SL-Glove recognize gestures?',
-      answer: 'SL-Glove uses integrated motion, flex, and pressure sensors embedded within the glove to capture hand and finger movements. The data is processed by embedded microcontrollers and AI models trained on Turkish Sign Language datasets, achieving accurate real-time gesture recognition.'
+      question: 'How does gesture recognition work?',
+      answer: 'Flex and IMU sensors capture finger bends and motion. An on‑device ML model on ESP32‑S3 classifies gestures and maps them to predefined commands.'
     },
     {
-      question: 'How does SL-Glove assist during phone calls?',
-      answer: 'When a hearing-impaired user initiates a call through the app, SL-Glove translates their sign gestures into spoken words for the listener. When the other person speaks, SL-Glove processes the audio and displays the corresponding Turkish Sign Language animation on the user\'s screen, ensuring a seamless two-way conversation.'
+      question: 'How are commands delivered to the team?',
+      answer: 'The system plays a corresponding audio prompt from microSD, outputs I2S digital audio to a PCM5102 DAC, and feeds an FM transmitter for RF broadcast to standard radios.'
     },
     {
-      question: 'Is SL-Glove available in multiple languages?',
-      answer: 'The first version focuses exclusively on Turkish Sign Language (TID). Future releases aim to support additional languages and international sign standards depending on user demand and available datasets.'
+      question: 'What latency does AKKE achieve?',
+      answer: 'End‑to‑end latency is targeted under 100 ms from gesture to audio broadcast.'
     },
     {
-      question: 'How is user privacy protected?',
-      answer: 'All user data, including gesture patterns and call translations, are encrypted and processed securely. SL-Glove adheres to GDPR-compliant data handling practices, ensuring no sensitive information is shared without explicit user consent.'
+      question: 'What is the operational range?',
+      answer: 'With antenna optimization, range exceeds 50 meters in typical environments.'
     },
     {
-      question: 'Who can use SL-Glove?',
-      answer: 'SL-Glove is designed for hearing-impaired or speech-impaired individuals, as well as educational institutions and healthcare professionals who work with sign language users. Its adjustable fit and modular design make it suitable for various age groups and hand sizes.'
+      question: 'Is the communication secure?',
+      answer: 'AKKE uses an encrypted wireless channel for device communications and FM broadcast for team radios. Sensitive data remains on‑device.'
+    },
+    {
+      question: 'How many gestures are supported?',
+      answer: 'The target is 50+ gestures at 75–80% accuracy, expandable over time with new data.'
+    },
+    {
+      question: 'Which environments is AKKE designed for?',
+      answer: 'Military operations, search‑and‑rescue, covert missions, and loud industrial sites where speech is impractical or risky.'
     }
   ]
 
@@ -70,7 +78,7 @@ const FAQSection = () => {
           </h2>
           
           <p className="text-body text-dark-600 dark:text-dark-300 max-w-3xl mx-auto text-balance">
-            Find answers to the most common questions about SL-Glove. Can't find what you're looking for? Contact our support team.
+            Find answers to the most common questions about AKKE. Can't find what you're looking for? Contact our support team.
           </p>
         </motion.div>
 

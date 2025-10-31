@@ -13,8 +13,8 @@ export const teamMembers = [
   {
     id: 2,
     name: 'Berk Çakmak',
-    role: 'Computer Engineer',
-    bio: 'Computer engineering student with expertise in software development and machine learning. Focused on creating intelligent systems for enhanced learning experiences.',
+    role: 'Computer Engineering — Project Lead',
+    bio: 'Leads system architecture and ML pipeline for real-time hand-signal recognition and secure command delivery.',
     avatar: null,
     socialLinks: [
       { name: 'LinkedIn', url: 'https://www.linkedin.com/in/berk-%C3%A7akmak/', icon: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 100 4 2 2 0 000-4z' },
@@ -24,8 +24,8 @@ export const teamMembers = [
   {
     id: 3,
     name: 'Ömer Efe Dikici',
-    role: 'Computer Engineer',
-    bio: 'Computer engineering student specializing in hardware-software integration and real-time systems. Dedicated to building accessible educational tools.',
+    role: 'Computer Engineering',
+    bio: 'Focuses on embedded software, sensor fusion, and low-latency signal processing on ESP32‑S3.',
     avatar: null,
     socialLinks: [
       { name: 'LinkedIn', url: 'https://www.linkedin.com/in/omerdikici/', icon: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 100 4 2 2 0 000-4z' },
@@ -35,8 +35,8 @@ export const teamMembers = [
   {
     id: 4,
     name: 'Şevval Kurtulmuş',
-    role: 'Electric and Electronic Engineer',
-    bio: 'Electric and electronic engineering student with focus on sensor technology and circuit design. Committed to developing innovative hardware solutions for education.',
+    role: 'Electrical and Electronics Engineering',
+    bio: 'Designs sensing hardware, power, and RF audio chain (I2S DAC and FM transmitter).',
     avatar: null,
     socialLinks: [
       { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sevvalkurtulmus/', icon: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 100 4 2 2 0 000-4z' },
@@ -47,12 +47,17 @@ export const teamMembers = [
 
 export const supervisor = {
   name: 'Ali Berkol',
-  role: 'Project Supervisor'
+  role: 'Advisor'
 }
 
 export const juries = [
-  { name: 'Mehmet Evren Coşkun', role: 'Jury Member' },
-  { name: 'Hakkı Gökhan İlk', role: 'Jury Member' }
+  { name: 'Hakkı Gökhan İlk', role: 'Jury Member' },
+  { name: 'Mehmet Evren Coşkun', role: 'Jury Member' }
+]
+
+export const advisors = [
+  { name: 'Ali Berkol' },
+  { name: 'Hüseyin Uğur Yıldız' }
 ]
 
 export const teamStats = [

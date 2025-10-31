@@ -54,9 +54,9 @@ const HeroSection = () => {
           >
             <motion.div variants={prefersReducedMotion ? {} : itemVariants} className="space-y-4">
               <h1 className="text-display text-dark-900 dark:text-white text-balance">
-                Turning Silence Into{' '}
+                AKKE —{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">
-                  Sound
+                  Smart Command and Control Glove
                 </span>
               </h1>
             </motion.div>
@@ -65,14 +65,14 @@ const HeroSection = () => {
               variants={prefersReducedMotion ? {} : itemVariants}
               className="text-xl sm:text-2xl text-dark-600 dark:text-dark-300 leading-relaxed text-balance max-w-2xl"
             >
-              Real-Time Communication Through Sign Language.
+              Silent, secure, real-time team communication for tactical operations.
             </motion.p>
 
             <motion.p
               variants={prefersReducedMotion ? {} : itemVariants}
               className="text-lg text-dark-600 dark:text-dark-300 leading-relaxed text-balance max-w-2xl"
             >
-              SL Glove is an AI-powered wearable and mobile system that makes phone conversations accessible for hearing- and speech-impaired individuals.
+              AKKE recognizes predefined hand signals and transmits commands over wireless links and FM radio, with low latency and no line-of-sight requirement.
             </motion.p>
 
             <motion.div

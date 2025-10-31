@@ -9,24 +9,24 @@ const HowItWorksSection = () => {
 
   const steps = [
     {
-      title: 'Open App & Connect',
-      description: 'Put on your SL-Glove and open the mobile application. The glove connects via Bluetooth 5.0 to your iOS or Android device instantly.',
-      details: 'The wearable glove is equipped with motion, flex, and pressure sensors paired with an embedded microcontroller for real-time data processing.',
+      title: 'Sense hand signals',
+      description: 'Flex sensors and IMU capture finger bends and hand motion from the glove.',
+      details: 'High-rate sampling feeds structured features to the embedded controller in real time.',
     },
     {
-      title: 'Initiate Call',
-      description: 'Select the contact you want to call from your app. The system initiates a voice call seamlessly through your phone network.',
-      details: 'No special equipment needed for the other party - they receive a regular phone call and can speak normally.',
+      title: 'Classify on ESP32‑S3',
+      description: 'An on-device ML model recognizes the gesture and maps it to a command.',
+      details: 'Targets; at least 5 commands with 75–80% accuracy; continuously improvable with new data.',
     },
     {
-      title: 'Sign Language to Speech',
-      description: 'Use Turkish Sign Language gestures with your glove. The AI model recognizes your signs, converts them to text, and synthesizes natural speech in real-time.',
-      details: 'Machine learning models trained on TİD datasets translate approximately 50 gestures with 75-80% accuracy, continuously improving through use.',
+      title: 'Prepare audio prompt',
+      description: 'The corresponding audio file is read from the microSD storage.',
+      details: '16‑bit PCM WAV at 44.1 kHz is streamed via I2S as digital audio.',
     },
     {
-      title: 'Speech to Animation',
-      description: 'When the other person speaks, the app processes their voice and displays corresponding Turkish Sign Language animations on your screen.',
-      details: 'Real-time audio processing ensures a seamless, two-way conversation experience with minimal latency.',
+      title: 'Transmit over RF/FM',
+      description: 'I2S feeds the PCM5102 DAC; analog audio drives the FM transmitter (e.g., 88.5 MHz).',
+      details: 'Team radios receive the message simultaneously without line-of-sight.',
     },
   ]
 
@@ -55,18 +55,18 @@ const HowItWorksSection = () => {
             className="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium mb-4"
             whileHover={{ scale: 1.05 }}
           >
-            Simple Process
+            End-to-end signal pipeline
           </motion.span>
           
           <h2 className="text-heading text-dark-900 dark:text-white mb-6 text-balance">
-            How SL-Glove{' '}
+            How AKKE{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">
               Works
             </span>
           </h2>
           
           <p className="text-body text-dark-600 dark:text-dark-300 max-w-3xl mx-auto text-balance">
-            SL-Glove enables real-time, two-way communication during phone calls. Here's how the system works from connection to conversation.
+            AKKE delivers silent, secure team commands with sub‑100 ms latency from gesture to audio broadcast.
           </p>
         </motion.div>
 
