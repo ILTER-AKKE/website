@@ -13,7 +13,7 @@ export const teamMembers = [
   {
     id: 2,
     name: 'Berk Çakmak',
-    role: 'Computer Engineering — Project Lead',
+    role: 'Computer Engineering',
     bio: 'Leads system architecture and ML pipeline for real-time hand-signal recognition and secure command delivery.',
     avatar: null,
     socialLinks: [
