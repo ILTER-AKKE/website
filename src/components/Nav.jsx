@@ -52,10 +52,10 @@ const Nav = ({ theme, toggleTheme }) => {
             className="flex items-center space-x-2"
           >
             <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">SL</span>
+              <span className="text-white font-bold text-lg">AK</span>
             </div>
             <span className="text-xl font-bold text-dark-900 dark:text-white">
-              SL-Glove
+              AKKE
             </span>
           </motion.div>
 

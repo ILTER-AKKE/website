@@ -1,5 +1,5 @@
 {
-  "name": "sl-glove-website",
+  "name": "AKKE-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -25,5 +25,5 @@
     "tailwindcss": "^3.4.18",
     "vite": "^7.1.7"
   },
-  "homepage": "https://abdullahesin.github.io/sl-glove-websit"
+  "homepage": "https://abdullahesin.github.io/AKKE-websit"
 }

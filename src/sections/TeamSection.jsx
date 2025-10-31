@@ -40,11 +40,11 @@ const TeamSection = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">
               Experts
             </span>{' '}
-            Behind SL-Glove
+            Behind AKKE
           </h2>
           
           <p className="text-body text-dark-600 dark:text-dark-300 max-w-3xl mx-auto text-balance">
-            Our diverse team of researchers, engineers, and designers is dedicated to revolutionizing education through innovative technology.
+            Our team builds reliable, low‑latency wearable systems for silent, secure command and control in demanding field operations.
           </p>
         </motion.div>
 

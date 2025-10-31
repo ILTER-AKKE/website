@@ -1,6 +1,6 @@
-# SL-Glove Website
+# AKKE Website
 
-A modern, responsive React website for SL-Glove - the revolutionary smart learning glove with gesture recognition and haptic feedback technology.
+A modern, responsive React website for AKKE - the revolutionary smart learning glove with gesture recognition and haptic feedback technology.
 
 ## 🚀 Features
 
@@ -30,8 +30,8 @@ A modern, responsive React website for SL-Glove - the revolutionary smart learni
 
 2. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/sl-glove-website.git
-   cd sl-glove-website
+   git clone https://github.com/yourusername/AKKE-website.git
+   cd AKKE-website
    ```
 
 3. **Install dependencies**
@@ -182,7 +182,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email contact@sl-glove.com or join our community Discord.
+For support, email contact@AKKE.com or join our community Discord.
 
 ---
 
