@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/sl-glove-websit/',
+  base: '/website/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
