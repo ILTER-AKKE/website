@@ -6,7 +6,7 @@ const Nav = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   
-  const sectionIds = ['hero', 'about', 'features', 'how', 'team', 'faq']
+  const sectionIds = ['hero', 'about', 'features', 'how', 'team', 'faq', 'reports']
   const activeSection = useScrollSpy(sectionIds)
 
   useEffect(() => {
@@ -24,6 +24,7 @@ const Nav = ({ theme, toggleTheme }) => {
     { id: 'how', label: 'How It Works' },
     { id: 'team', label: 'Team' },
     { id: 'faq', label: 'FAQ' },
+    { id: 'reports', label: 'Reports' },
   ]
 
   const scrollToSection = (sectionId) => {

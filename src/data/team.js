@@ -56,8 +56,8 @@ export const juries = [
 ]
 
 export const advisors = [
-  { name: 'Ali Berkol' },
-  { name: 'Hüseyin Uğur Yıldız' }
+  { name: 'Ali Berkol', role: 'Advisor' },
+  { name: 'Hüseyin Uğur Yıldız', role: 'Advisor' }
 ]
 
 export const teamStats = [

@@ -9,6 +9,7 @@ import FeaturesSection from './sections/FeaturesSection'
 import HowItWorksSection from './sections/HowItWorksSection'
 import TeamSection from './sections/TeamSection'
 import FAQSection from './sections/FAQSection'
+import ReportsSection from './sections/ReportsSection'
 import Footer from './components/Footer'
 
 // Hooks
@@ -29,6 +30,7 @@ function App() {
         <HowItWorksSection />
         <TeamSection />
         <FAQSection />
+        <ReportsSection />
       </main>
       
       <Footer />
