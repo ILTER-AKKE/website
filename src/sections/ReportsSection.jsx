@@ -13,6 +13,14 @@ const ReportsSection = () => {
       fileName: 'CMPE491_AKKE_Project_Proposal.pdf',
       date: '2025',
       type: 'Proposal'
+    },
+    {
+      id: 2,
+      title: 'Project Specification',
+      description: 'Detailed project specification report covering system requirements, design specifications, and technical implementation details.',
+      fileName: 'CMPE491_AKKE_Project_Specification_Report.pdf',
+      date: '2025',
+      type: 'Specification'
     }
   ]
 
