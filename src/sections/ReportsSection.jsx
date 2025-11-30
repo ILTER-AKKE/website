@@ -21,6 +21,14 @@ const ReportsSection = () => {
       fileName: 'CMPE491_AKKE_Project_Specification_Report.pdf',
       date: '2025',
       type: 'Specification'
+    },
+    {
+      id: 3,
+      title: 'Analysis Report',
+      description: 'Comprehensive analysis report including system analysis, performance evaluation, and detailed technical assessments of the AKKE project.',
+      fileName: 'CMPE491_AKKE_Analysis_Report.pdf',
+      date: '2025',
+      type: 'Analysis'
     }
   ]
 
