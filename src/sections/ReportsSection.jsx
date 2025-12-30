@@ -29,6 +29,14 @@ const ReportsSection = () => {
       fileName: 'CMPE491_AKKE_Analysis_Report.pdf',
       date: '2025',
       type: 'Analysis'
+    },
+    {
+      id: 4,
+      title: 'High Level Design Report',
+      description: 'High-level design document covering system architecture, component design, interface specifications, and overall system structure of the AKKE project.',
+      fileName: 'CMPE491_AKKE_High_Level_Design_Report.pdf',
+      date: '2025',
+      type: 'Design'
     }
   ]
 
