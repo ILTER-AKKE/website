@@ -1,0 +1,18 @@
+Sprint,Task ID,Task Title,Description,Responsible,Priority,Due Date,Status
+Sprint 1,T01,Project Proposal Preparation,"Writing project scope, basic objectives, and a 1-2 paragraph description.",All Team,High,31.10.2025,Completed
+Sprint 1,T02,Website Setup,Creating the GitHub/GitHub Pages site where project reports will be published.,Abdullah / Berk,Medium,31.10.2025,Completed
+Sprint 1,T03,Literature Review,Research on wearable gesture recognition systems and similar military applications.,All Team,Low,31.10.2025,Completed
+Sprint 2,T04,Project Specification Report (D2),Detailing functional and non-functional requirements.,All Team,High,07.11.2025,Completed
+Sprint 2,T05,Constraints and Ethics Section,"Writing economic, environmental, social constraints and ethical responsibilities.",All Team,High,07.11.2025,Completed
+Sprint 2,T06,Backlog Document (D3),Creating project task list and timeline.,Berk,Medium,07.11.2025,Completed
+Sprint 3,T07,Analysis Report Preparation (D4),"Drawing system models, scenarios, and use case diagrams.",Abdullah,High,21.11.2025,Completed
+Sprint 3,T08,Hardware Component Procurement,"ESP32-S3, Flex sensors, IMU and RF modules procurement.",All Team,High,21.11.2025,Pending
+Sprint 3,T09,Sensor Data Collection Interface,Writing basic code to read Flex and IMU data via ESP32.,TBD,Medium,January 2026,Pending
+Sprint 3,T10,Backlog Update (D5),Revising task list after analysis phase.,TBD,Low,January 2026,Pending
+Sprint 4,T11,High-Level Design Report (D6),"Architectural design, subsystem decomposition and hardware/software mapping.",TBD,High,January 2026,Pending
+Sprint 4,T12,TinyML Model Design,Determining the structure of the model (CNN/RNN) to be used for gesture classification.,TBD,High,January 2026,Pending
+Sprint 4,T13,Audio and RF Module Integration,Testing audio playback via DFPlayer Mini and data transmission via RF.,TBD,High,January 2026,Pending
+Sprint 4,T14,Backlog Update (D7),Planning for implementation phase after design.,TBD,Low,January 2026,Pending
+Sprint 5,T15,Prototype Assembly,Physical mounting of sensors and circuit components on the glove.,TBD,High,January 2026,Pending
+Sprint 5,T16,Final Presentation and Demo (D8),Live testing of the system and preparation of poster/presentation materials.,TBD,High,January 2026,Pending
+Sprint 5,T17,Error Tests and Calibration,Optimizing sensor calibration data for different hand sizes.,TBD,Medium,January 2026,Pending
