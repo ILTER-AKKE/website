@@ -10,6 +10,7 @@ import HowItWorksSection from './sections/HowItWorksSection'
 import TeamSection from './sections/TeamSection'
 import FAQSection from './sections/FAQSection'
 import ReportsSection from './sections/ReportsSection'
+import TodoSection from './sections/TodoSection'
 import Footer from './components/Footer'
 
 // Hooks
@@ -31,6 +32,7 @@ function App() {
         <TeamSection />
         <FAQSection />
         <ReportsSection />
+        <TodoSection />
       </main>
       
       <Footer />
