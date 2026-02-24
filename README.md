@@ -1,6 +1,7 @@
 # AKKE Website
 
 A modern, responsive React website for AKKE - the revolutionary smart learning glove with gesture recognition and haptic feedback technology.
+To visit the website: https://ilter-akke.github.io/website/
 
 ## 🚀 Features
 
