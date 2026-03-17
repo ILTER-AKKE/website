@@ -63,16 +63,6 @@ export const todos = [
     sprint: 'Sprint 3',
     id: 'T07',
     title: 'Analysis Report Preparation (D4)',
-    description: 'Preparation of High Level Design Documentation.',
-    responsible: 'All Team',
-    priority: 'High',
-    dueDate: '21.11.2025',
-    status: 'Completed'
-  },
-  {
-    sprint: 'Sprint 3',
-    id: 'T07',
-    title: 'Preparation of Diagrams',
     description: 'Drawing system models, scenarios, and use case diagrams.',
     responsible: 'Abdullah',
     priority: 'High',
@@ -81,9 +71,19 @@ export const todos = [
   },
   {
     sprint: 'Sprint 3',
+    id: 'T07b',
+    title: 'Analysis Report Preparation (D4) - Documentation',
+    description: 'Preparation of High Level Design Documentation.',
+    responsible: 'All Team',
+    priority: 'High',
+    dueDate: '21.11.2025',
+    status: 'Completed'
+  },
+  {
+    sprint: 'Sprint 3',
     id: 'T08',
     title: 'Hardware Component Procurement',
-    description: 'Procurement of ESP32-S3, Flex sensors, IMU and RF modules.',
+    description: 'Procurement of ESP32-WROOM-32, Flex sensors, IMU and RF modules.',
     responsible: 'All Team',
     priority: 'High',
     dueDate: '21.11.2025',
@@ -177,6 +177,146 @@ export const todos = [
     responsible: 'TBD',
     priority: 'Medium',
     dueDate: 'January 2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 6',
+    id: 'T18',
+    title: 'Glove Assembly & Soldering',
+    description: 'Physical mounting of ESP32-WROOM-32, Flex sensors, and MPU6050 onto the glove.',
+    responsible: 'All Team',
+    priority: 'High',
+    dueDate: '27.03.2026',
+    status: 'In Progress'
+  },
+  {
+    sprint: 'Sprint 6',
+    id: 'T19',
+    title: 'Low-Level Design Report (D1 & D3)',
+    description: 'Detailing hardware-software mapping, interface contracts, and state behaviors.',
+    responsible: 'All Team',
+    priority: 'High',
+    dueDate: '20.03.2026',
+    status: 'Completed'
+  },
+  {
+    sprint: 'Sprint 6',
+    id: 'T20',
+    title: 'Backlog Document Update (D2)',
+    description: 'Creating CMPE 492 task list and timeline.',
+    responsible: 'Abdullah',
+    priority: 'Medium',
+    dueDate: '20.03.2026',
+    status: 'Completed'
+  },
+  {
+    sprint: 'Sprint 6',
+    id: 'T21',
+    title: 'Sensor Data Acquisition (Flex & IMU)',
+    description: 'Finalizing the embedded C++ code for reading normalized data at 200Hz.',
+    responsible: 'TBD',
+    priority: 'High',
+    dueDate: '27.03.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 7',
+    id: 'T22',
+    title: 'Low-Level Design Update (D4)',
+    description: 'Revising the LLD based on supervisor feedback.',
+    responsible: 'All Team',
+    priority: 'High',
+    dueDate: '27.03.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 7',
+    id: 'T23',
+    title: 'Gesture Data Collection',
+    description: 'Recording sensor data for the 5 prototype gestures to build the dataset.',
+    responsible: 'TBD',
+    priority: 'High',
+    dueDate: '15.04.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 7',
+    id: 'T24',
+    title: 'TinyML Model Training',
+    description: 'Developing and training the gesture classification model using the collected dataset.',
+    responsible: 'TBD',
+    priority: 'High',
+    dueDate: '15.04.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 7',
+    id: 'T25',
+    title: 'Test Plan Report (D5)',
+    description: 'Identifying testing strategies (unit, system, integration) for the AKKE system.',
+    responsible: 'All Team',
+    priority: 'High',
+    dueDate: '10.04.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 8',
+    id: 'T26',
+    title: 'ESP-NOW Protocol Integration',
+    description: 'Implementing the digital trigger communication between the glove and the receiver unit.',
+    responsible: 'TBD',
+    priority: 'High',
+    dueDate: '30.04.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 8',
+    id: 'T27',
+    title: 'Audio Module & Potentiometer Setup',
+    description: 'Interfacing DFPlayer via UART and implementing volume control on the receiver.',
+    responsible: 'TBD',
+    priority: 'High',
+    dueDate: '30.04.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 8',
+    id: 'T28',
+    title: 'End-to-End System Testing',
+    description: 'Executing test cases defined in the Test Plan (Latency, accuracy, noise).',
+    responsible: 'All Team',
+    priority: 'High',
+    dueDate: '05.05.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 9',
+    id: 'T29',
+    title: 'Final Report Preparation (D7)',
+    description: 'Documenting final architecture, engineering impact, and test results.',
+    responsible: 'All Team',
+    priority: 'High',
+    dueDate: '15.05.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 9',
+    id: 'T30',
+    title: 'Presentation & Demo Video (D8)',
+    description: 'Recording the 25-minute system demonstration and presentation.',
+    responsible: 'All Team',
+    priority: 'High',
+    dueDate: '15.05.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 9',
+    id: 'T31',
+    title: 'Poster Preparation for Exhibition',
+    description: 'Designing the poster for the Young Minds New Ideas competition.',
+    responsible: 'TBD',
+    priority: 'Medium',
+    dueDate: '15.05.2026',
     status: 'Pending'
   }
 ]
