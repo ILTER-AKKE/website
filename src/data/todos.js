@@ -71,9 +71,9 @@ export const todos = [
   },
   {
     sprint: 'Sprint 3',
-    id: 'T07b',
-    title: 'Analysis Report Preparation (D4) - Documentation',
-    description: 'Preparation of High Level Design Documentation.',
+    id: 'T08',
+    title: 'Hardware Component Procurement',
+    description: 'ESP32-WROOM-32, Flex sensors, and IMU module procurement.',
     responsible: 'All Team',
     priority: 'High',
     dueDate: '21.11.2025',
@@ -81,103 +81,93 @@ export const todos = [
   },
   {
     sprint: 'Sprint 3',
-    id: 'T08',
-    title: 'Hardware Component Procurement',
-    description: 'Procurement of ESP32-WROOM-32, Flex sensors, IMU and RF modules.',
-    responsible: 'All Team',
-    priority: 'High',
-    dueDate: '21.11.2025',
-    status: 'Pending'
-  },
-  {
-    sprint: 'Sprint 3',
     id: 'T09',
     title: 'Sensor Data Collection Interface',
     description: 'Writing basic code to read Flex and IMU data via ESP32.',
-    responsible: 'TBD',
+    responsible: 'Ömer / Şevval',
     priority: 'Medium',
-    dueDate: 'January 2026',
-    status: 'Pending'
+    dueDate: '15.01.2026',
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 3',
     id: 'T10',
     title: 'Backlog Update (D5)',
     description: 'Revising task list after analysis phase.',
-    responsible: 'TBD',
+    responsible: 'Abdullah',
     priority: 'Low',
-    dueDate: 'January 2026',
-    status: 'Pending'
+    dueDate: '15.01.2026',
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 4',
     id: 'T11',
     title: 'High-Level Design Report (D6)',
     description: 'Architectural design, subsystem decomposition and hardware/software mapping.',
-    responsible: 'TBD',
+    responsible: 'All Team',
     priority: 'High',
-    dueDate: 'January 2026',
-    status: 'Pending'
+    dueDate: '15.01.2026',
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 4',
     id: 'T12',
     title: 'TinyML Model Design',
     description: 'Determining the structure of the model (CNN/RNN) to be used for gesture classification.',
-    responsible: 'TBD',
+    responsible: 'All Team',
     priority: 'High',
-    dueDate: 'January 2026',
-    status: 'Pending'
+    dueDate: '15.01.2026',
+    status: 'Cancelled'
   },
   {
     sprint: 'Sprint 4',
     id: 'T13',
     title: 'Audio and RF Module Integration',
     description: 'Testing audio playback via DFPlayer Mini and data transmission via RF.',
-    responsible: 'TBD',
+    responsible: 'All Team',
     priority: 'High',
-    dueDate: 'January 2026',
-    status: 'Pending'
+    dueDate: '15.01.2026',
+    status: 'Cancelled'
   },
   {
     sprint: 'Sprint 4',
     id: 'T14',
     title: 'Backlog Update (D7)',
     description: 'Planning for implementation phase after design.',
-    responsible: 'TBD',
+    responsible: 'Berk',
     priority: 'Low',
-    dueDate: 'January 2026',
-    status: 'Pending'
+    dueDate: '15.01.2026',
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 5',
     id: 'T15',
     title: 'Prototype Assembly',
     description: 'Physical mounting of sensors and circuit components on the glove.',
-    responsible: 'TBD',
+    responsible: 'All Team',
     priority: 'High',
-    dueDate: 'January 2026',
-    status: 'Pending'
+    dueDate: '15.01.2026',
+    status: 'Cancelled'
   },
   {
     sprint: 'Sprint 5',
     id: 'T16',
     title: 'Final Presentation and Demo (D8)',
     description: 'Live testing of the system and preparation of poster/presentation materials.',
-    responsible: 'TBD',
+    responsible: 'All Team',
     priority: 'High',
-    dueDate: 'January 2026',
-    status: 'Pending'
+    dueDate: '15.01.2026',
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 5',
     id: 'T17',
     title: 'Error Tests and Calibration',
     description: 'Optimizing sensor calibration data for different hand sizes.',
-    responsible: 'TBD',
+    responsible: 'Ömer / Şevval',
     priority: 'Medium',
-    dueDate: 'January 2026',
-    status: 'Pending'
+    dueDate: '15.01.2026',
+    status: 'Cancelled'
   },
   {
     sprint: 'Sprint 6',
@@ -214,10 +204,10 @@ export const todos = [
     id: 'T21',
     title: 'Sensor Data Acquisition (Flex & IMU)',
     description: 'Finalizing the embedded C++ code for reading normalized data at 200Hz.',
-    responsible: 'TBD',
+    responsible: 'Abdullah / Berk',
     priority: 'High',
     dueDate: '27.03.2026',
-    status: 'Pending'
+    status: 'In Progress'
   },
   {
     sprint: 'Sprint 7',
@@ -234,7 +224,7 @@ export const todos = [
     id: 'T23',
     title: 'Gesture Data Collection',
     description: 'Recording sensor data for the 5 prototype gestures to build the dataset.',
-    responsible: 'TBD',
+    responsible: 'All Team',
     priority: 'High',
     dueDate: '15.04.2026',
     status: 'Pending'
@@ -244,7 +234,7 @@ export const todos = [
     id: 'T24',
     title: 'TinyML Model Training',
     description: 'Developing and training the gesture classification model using the collected dataset.',
-    responsible: 'TBD',
+    responsible: 'Abdullah / Berk',
     priority: 'High',
     dueDate: '15.04.2026',
     status: 'Pending'
@@ -264,17 +254,17 @@ export const todos = [
     id: 'T26',
     title: 'ESP-NOW Protocol Integration',
     description: 'Implementing the digital trigger communication between the glove and the receiver unit.',
-    responsible: 'TBD',
+    responsible: 'Şevval',
     priority: 'High',
     dueDate: '30.04.2026',
-    status: 'Pending'
+    status: 'In Progress'
   },
   {
     sprint: 'Sprint 8',
     id: 'T27',
     title: 'Audio Module & Potentiometer Setup',
     description: 'Interfacing DFPlayer via UART and implementing volume control on the receiver.',
-    responsible: 'TBD',
+    responsible: 'Şevval',
     priority: 'High',
     dueDate: '30.04.2026',
     status: 'Pending'
@@ -314,7 +304,7 @@ export const todos = [
     id: 'T31',
     title: 'Poster Preparation for Exhibition',
     description: 'Designing the poster for the Young Minds New Ideas competition.',
-    responsible: 'TBD',
+    responsible: 'All Team',
     priority: 'Medium',
     dueDate: '15.05.2026',
     status: 'Pending'
