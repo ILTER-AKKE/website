@@ -8,7 +8,7 @@ const TodoSection = () => {
   const [selectedSprint, setSelectedSprint] = useState('All')
   const [selectedStatus, setSelectedStatus] = useState('All')
   const sprints = ['All', ...getUniqueSprints()]
-  const statuses = ['All', 'Completed', 'Pending']
+  const statuses = ['All', 'Completed', 'In Progress', 'Pending']
 
   const getPriorityColor = (priority) => {
     switch (priority) {
@@ -27,6 +27,8 @@ const TodoSection = () => {
     switch (status) {
       case 'Completed':
         return 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
+      case 'In Progress':
+        return 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
       case 'Pending':
         return 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300'
       default:
@@ -34,15 +36,36 @@ const TodoSection = () => {
     }
   }
 
+  const normalizeFilterValue = (value) => {
+    if (typeof value === 'string') return value.trim()
+    if (value === null || value === undefined) return ''
+    return String(value).trim()
+  }
+
   const filteredTodos = todos.filter(todo => {
-    const sprintMatch = selectedSprint === 'All' || todo.sprint === selectedSprint
-    const statusMatch = selectedStatus === 'All' || todo.status === selectedStatus
+    const sprintMatch =
+      selectedSprint === 'All' ||
+      normalizeFilterValue(todo.sprint) === normalizeFilterValue(selectedSprint)
+
+    const statusMatch =
+      selectedStatus === 'All' ||
+      normalizeFilterValue(todo.status) === normalizeFilterValue(selectedStatus)
+
     return sprintMatch && statusMatch
   })
+
+  const handleSprintChange = (e) => {
+    setSelectedSprint(e.target.value)
+  }
+
+  const handleStatusChange = (e) => {
+    setSelectedStatus(e.target.value)
+  }
 
   const stats = {
     total: todos.length,
     completed: getTodosByStatus('Completed').length,
+    inProgress: getTodosByStatus('In Progress').length,
     pending: getTodosByStatus('Pending').length
   }
 
@@ -105,6 +128,16 @@ const TodoSection = () => {
               <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">{stats.pending}</div>
               <div className="text-sm text-dark-600 dark:text-dark-400">Pending</div>
             </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-white dark:bg-dark-900 rounded-lg px-6 py-4 shadow-md"
+            >
+              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.inProgress}</div>
+              <div className="text-sm text-dark-600 dark:text-dark-400">In Progress</div>
+            </motion.div>
           </div>
 
           {/* Filters */}
@@ -113,7 +146,7 @@ const TodoSection = () => {
               <label className="text-sm font-medium text-dark-700 dark:text-dark-300">Sprint:</label>
               <select
                 value={selectedSprint}
-                onChange={(e) => setSelectedSprint(e.target.value)}
+                onChange={handleSprintChange}
                 className="px-4 py-2 bg-white dark:bg-dark-900 border border-gray-300 dark:border-dark-700 rounded-lg text-sm text-dark-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 {sprints.map(sprint => (
@@ -125,7 +158,7 @@ const TodoSection = () => {
               <label className="text-sm font-medium text-dark-700 dark:text-dark-300">Status:</label>
               <select
                 value={selectedStatus}
-                onChange={(e) => setSelectedStatus(e.target.value)}
+                onChange={handleStatusChange}
                 className="px-4 py-2 bg-white dark:bg-dark-900 border border-gray-300 dark:border-dark-700 rounded-lg text-sm text-dark-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 {statuses.map(status => (
@@ -138,6 +171,7 @@ const TodoSection = () => {
 
         {/* Todo Cards */}
         <motion.div
+          key={`${selectedSprint}-${selectedStatus}`}
           variants={prefersReducedMotion ? {} : {
             hidden: { opacity: 0 },
             visible: {
@@ -155,7 +189,7 @@ const TodoSection = () => {
         >
           {filteredTodos.map((todo, index) => (
             <motion.div
-              key={todo.id}
+              key={`${todo.sprint}-${todo.id}-${todo.title}`}
               variants={prefersReducedMotion ? {} : {
                 hidden: { opacity: 0, y: 30 },
                 visible: {
