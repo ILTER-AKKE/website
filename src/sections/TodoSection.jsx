@@ -8,7 +8,7 @@ const TodoSection = () => {
   const [selectedSprint, setSelectedSprint] = useState('All')
   const [selectedStatus, setSelectedStatus] = useState('All')
   const sprints = ['All', ...getUniqueSprints()]
-  const statuses = ['All', 'Completed', 'In Progress', 'Pending']
+  const statuses = ['All', 'Completed', 'In Progress', 'Pending', 'Cancelled']
 
   const getPriorityColor = (priority) => {
     switch (priority) {
@@ -31,6 +31,8 @@ const TodoSection = () => {
         return 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
       case 'Pending':
         return 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300'
+      case 'Cancelled':
+        return 'bg-gray-200 dark:bg-gray-800 text-gray-500 dark:text-gray-400'
       default:
         return 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
     }
@@ -66,7 +68,8 @@ const TodoSection = () => {
     total: todos.length,
     completed: getTodosByStatus('Completed').length,
     inProgress: getTodosByStatus('In Progress').length,
-    pending: getTodosByStatus('Pending').length
+    pending: getTodosByStatus('Pending').length,
+    cancelled: getTodosByStatus('Cancelled').length
   }
 
   return (
@@ -137,6 +140,16 @@ const TodoSection = () => {
             >
               <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.inProgress}</div>
               <div className="text-sm text-dark-600 dark:text-dark-400">In Progress</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-white dark:bg-dark-900 rounded-lg px-6 py-4 shadow-md"
+            >
+              <div className="text-2xl font-bold text-gray-500 dark:text-gray-400">{stats.cancelled}</div>
+              <div className="text-sm text-dark-600 dark:text-dark-400">Cancelled</div>
             </motion.div>
           </div>
 

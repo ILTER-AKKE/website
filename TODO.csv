@@ -6,28 +6,27 @@ Sprint 2,T04,Project Specification Report (D2),Detailing functional and non-func
 Sprint 2,T05,Constraints and Ethics Section,"Writing economic, environmental, social constraints and ethical responsibilities.",All Team,High,07.11.2025,Completed
 Sprint 2,T06,Backlog Document (D3),Creating project task list and timeline.,Berk,Medium,07.11.2025,Completed
 Sprint 3,T07,Analysis Report Preparation (D4),"Drawing system models, scenarios, and use case diagrams.",Abdullah,High,21.11.2025,Completed
-Sprint 3,T07b,Analysis Report Preparation (D4) - Documentation,Preparation of High Level Design Documentation.,All Team,High,21.11.2025,Completed
-Sprint 3,T08,Hardware Component Procurement,"ESP32-WROOM-32, Flex sensors, IMU and RF modules procurement.",All Team,High,21.11.2025,Pending
-Sprint 3,T09,Sensor Data Collection Interface,Writing basic code to read Flex and IMU data via ESP32.,TBD,Medium,January 2026,Pending
-Sprint 3,T10,Backlog Update (D5),Revising task list after analysis phase.,TBD,Low,January 2026,Pending
-Sprint 4,T11,High-Level Design Report (D6),"Architectural design, subsystem decomposition and hardware/software mapping.",TBD,High,January 2026,Pending
-Sprint 4,T12,TinyML Model Design,Determining the structure of the model (CNN/RNN) to be used for gesture classification.,TBD,High,January 2026,Pending
-Sprint 4,T13,Audio and RF Module Integration,Testing audio playback via DFPlayer Mini and data transmission via RF.,TBD,High,January 2026,Pending
-Sprint 4,T14,Backlog Update (D7),Planning for implementation phase after design.,TBD,Low,January 2026,Pending
-Sprint 5,T15,Prototype Assembly,Physical mounting of sensors and circuit components on the glove.,TBD,High,January 2026,Pending
-Sprint 5,T16,Final Presentation and Demo (D8),Live testing of the system and preparation of poster/presentation materials.,TBD,High,January 2026,Pending
-Sprint 5,T17,Error Tests and Calibration,Optimizing sensor calibration data for different hand sizes.,TBD,Medium,January 2026,Pending
+Sprint 3,T08,Hardware Component Procurement,"ESP32-WROOM-32, Flex sensors, and IMU module procurement.",All Team,High,21.11.2025,Completed
+Sprint 3,T09,Sensor Data Collection Interface,Writing basic code to read Flex and IMU data via ESP32.,Ömer / Şevval,Medium,15.01.2026,Completed
+Sprint 3,T10,Backlog Update (D5),Revising task list after analysis phase.,Abdullah,Low,15.01.2026,Completed
+Sprint 4,T11,High-Level Design Report (D6),"Architectural design, subsystem decomposition and hardware/software mapping.",All Team,High,15.01.2026,Completed
+Sprint 4,T12,TinyML Model Design,Determining the structure of the model (CNN/RNN) to be used for gesture classification.,All Team,High,15.01.2026,Cancelled
+Sprint 4,T13,Audio and RF Module Integration,Testing audio playback via DFPlayer Mini and data transmission via RF.,All Team,High,15.01.2026,Cancelled
+Sprint 4,T14,Backlog Update (D7),Planning for implementation phase after design.,Berk,Low,15.01.2026,Completed
+Sprint 5,T15,Prototype Assembly,Physical mounting of sensors and circuit components on the glove.,All Team,High,15.01.2026,Cancelled
+Sprint 5,T16,Final Presentation and Demo (D8),Live testing of the system and preparation of poster/presentation materials.,All Team,High,15.01.2026,Completed
+Sprint 5,T17,Error Tests and Calibration,Optimizing sensor calibration data for different hand sizes.,Ömer / Şevval,Medium,15.01.2026,Cancelled
 Sprint 6,T18,Glove Assembly & Soldering,"Physical mounting of ESP32-WROOM-32, Flex sensors, and MPU6050 onto the glove.",All Team,High,27.03.2026,In Progress
 Sprint 6,T19,Low-Level Design Report (D1 & D3),"Detailing hardware-software mapping, interface contracts, and state behaviors.",All Team,High,20.03.2026,Completed
 Sprint 6,T20,Backlog Document Update (D2),"Creating CMPE 492 task list and timeline.",Abdullah,Medium,20.03.2026,Completed
-Sprint 6,T21,Sensor Data Acquisition (Flex & IMU),"Finalizing the embedded C++ code for reading normalized data at 200Hz.",TBD,High,27.03.2026,Pending
+Sprint 6,T21,Sensor Data Acquisition (Flex & IMU),"Finalizing the embedded C++ code for reading normalized data at 200Hz.",Abdullah / Berk,High,27.03.2026,In Progress
 Sprint 7,T22,Low-Level Design Update (D4),"Revising the LLD based on supervisor feedback.",All Team,High,27.03.2026,Pending
-Sprint 7,T23,Gesture Data Collection,"Recording sensor data for the 5 prototype gestures to build the dataset.",TBD,High,15.04.2026,Pending
-Sprint 7,T24,TinyML Model Training,"Developing and training the gesture classification model using the collected dataset.",TBD,High,15.04.2026,Pending
+Sprint 7,T23,Gesture Data Collection,"Recording sensor data for the 5 prototype gestures to build the dataset.",All Team,High,15.04.2026,Pending
+Sprint 7,T24,TinyML Model Training,"Developing and training the gesture classification model using the collected dataset.",Abdullah / Berk,High,15.04.2026,Pending
 Sprint 7,T25,Test Plan Report (D5),"Identifying testing strategies (unit, system, integration) for the AKKE system.",All Team,High,10.04.2026,Pending
-Sprint 8,T26,ESP-NOW Protocol Integration,"Implementing the digital trigger communication between the glove and the receiver unit.",TBD,High,30.04.2026,Pending
-Sprint 8,T27,Audio Module & Potentiometer Setup,"Interfacing DFPlayer via UART and implementing volume control on the receiver.",TBD,High,30.04.2026,Pending
+Sprint 8,T26,ESP-NOW Protocol Integration,"Implementing the digital trigger communication between the glove and the receiver unit.",Şevval,High,30.04.2026,In Progress
+Sprint 8,T27,Audio Module & Potentiometer Setup,"Interfacing DFPlayer via UART and implementing volume control on the receiver.",Şevval,High,30.04.2026,Pending
 Sprint 8,T28,End-to-End System Testing,"Executing test cases defined in the Test Plan (Latency, accuracy, noise).",All Team,High,05.05.2026,Pending
 Sprint 9,T29,Final Report Preparation (D7),"Documenting final architecture, engineering impact, and test results.",All Team,High,15.05.2026,Pending
 Sprint 9,T30,Presentation & Demo Video (D8),"Recording the 25-minute system demonstration and presentation.",All Team,High,15.05.2026,Pending
-Sprint 9,T31,Poster Preparation for Exhibition,"Designing the poster for the Young Minds New Ideas competition.",TBD,Medium,15.05.2026,Pending
+Sprint 9,T31,Poster Preparation for Exhibition,"Designing the poster for the Young Minds New Ideas competition.",All Team,Medium,15.05.2026,Pending
