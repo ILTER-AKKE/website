@@ -37,6 +37,14 @@ const ReportsSection = () => {
       fileName: 'CMPE491_AKKE_High_Level_Design_Report.pdf',
       date: '2025',
       type: 'Design'
+    },
+    {
+      id: 5,
+      title: 'Low Level Design Report',
+      description: 'Low-level design report detailing hardware-software mapping, interface contracts, module-level behaviors, and implementation-level decisions for AKKE.',
+      fileName: 'CMPE492_AKKE_Low_Level_Design_Report.pdf',
+      date: '2026',
+      type: 'Design'
     }
   ]
 
