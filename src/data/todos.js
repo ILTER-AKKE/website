@@ -173,7 +173,7 @@ export const todos = [
     sprint: 'Sprint 6',
     id: 'T18',
     title: 'Glove Assembly & Soldering',
-    description: 'Physical mounting of ESP32-WROOM-32, Flex sensors, and MPU6050 onto the glove.',
+    description: 'Replacing broken flex sensors, re-soldering, and sewing them onto the glove.',
     responsible: 'All Team',
     priority: 'High',
     dueDate: '27.03.2026',
@@ -203,11 +203,11 @@ export const todos = [
     sprint: 'Sprint 6',
     id: 'T21',
     title: 'Sensor Data Acquisition (Flex & IMU)',
-    description: 'Finalizing the embedded C++ code for reading normalized data at 200Hz.',
+    description: 'Finalizing C++ code for reading data at 200Hz. Added hardware fault detection (0/4095 limits).',
     responsible: 'Abdullah / Berk',
     priority: 'High',
     dueDate: '27.03.2026',
-    status: 'In Progress'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 7',
@@ -217,17 +217,17 @@ export const todos = [
     responsible: 'All Team',
     priority: 'High',
     dueDate: '27.03.2026',
-    status: 'Pending'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 7',
     id: 'T23',
     title: 'Gesture Data Collection',
-    description: 'Recording sensor data for the 5 prototype gestures to build the dataset.',
+    description: 'Streaming sensor data (Timestamp, 5 Flex, 6 IMU) via Serial to collect the gesture dataset.',
     responsible: 'All Team',
     priority: 'High',
     dueDate: '15.04.2026',
-    status: 'Pending'
+    status: 'In Progress'
   },
   {
     sprint: 'Sprint 7',
@@ -280,8 +280,18 @@ export const todos = [
     status: 'Pending'
   },
   {
-    sprint: 'Sprint 9',
+    sprint: 'Sprint 8',
     id: 'T29',
+    title: 'Receiver Battery Management & LED',
+    description: 'Implementing voltage divider for 9V battery and RGB LED feedback for successful packet / low battery warnings.',
+    responsible: 'Şevval',
+    priority: 'High',
+    dueDate: '30.04.2026',
+    status: 'Pending'
+  },
+  {
+    sprint: 'Sprint 9',
+    id: 'T30',
     title: 'Final Report Preparation (D7)',
     description: 'Documenting final architecture, engineering impact, and test results.',
     responsible: 'All Team',
@@ -291,7 +301,7 @@ export const todos = [
   },
   {
     sprint: 'Sprint 9',
-    id: 'T30',
+    id: 'T31',
     title: 'Presentation & Demo Video (D8)',
     description: 'Recording the 25-minute system demonstration and presentation.',
     responsible: 'All Team',
@@ -301,7 +311,7 @@ export const todos = [
   },
   {
     sprint: 'Sprint 9',
-    id: 'T31',
+    id: 'T32',
     title: 'Poster Preparation for Exhibition',
     description: 'Designing the poster for the Young Minds New Ideas competition.',
     responsible: 'All Team',
