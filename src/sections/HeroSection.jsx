@@ -111,28 +111,25 @@ const HeroSection = () => {
               }}
             />
             
-            {/* Main Icon */}
+            {/* Main Logo Image */}
             <motion.div
-              className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center shadow-2xl"
+              className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <motion.div
-                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 bg-white/20 rounded-full flex items-center justify-center"
+              <motion.img
+                src={`${import.meta.env.BASE_URL}logo.png`}
+                alt="AKKE Logo Large"
+                className="w-full h-full object-contain drop-shadow-2xl"
                 animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 10, -10, 0],
+                  y: [0, -15, 0],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 4,
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-              >
-                <svg className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                </svg>
-              </motion.div>
+              />
             </motion.div>
           </motion.div>
         </div>

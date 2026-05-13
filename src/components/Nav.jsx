@@ -53,9 +53,7 @@ const Nav = ({ theme, toggleTheme }) => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">AK</span>
-            </div>
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="AKKE Logo" className="w-10 h-10 object-contain" />
             <span className="text-xl font-bold text-dark-900 dark:text-white">
               AKKE
             </span>
