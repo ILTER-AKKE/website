@@ -55,6 +55,15 @@ const ReportsSection = () => {
       date: '2026',
       type: 'Testing',
     },
+    {
+      id: 7,
+      title: 'Final Report',
+      description:
+        'Final comprehensive report detailing the complete AKKE system implementation, evaluation, and conclusion.',
+      fileName: 'AKKE_Final_Report.pdf',
+      date: '2026',
+      type: 'Final',
+    },
   ]
 
   const handleView = (fileName) => {
