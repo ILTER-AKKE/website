@@ -68,22 +68,22 @@ const ValueSection = () => {
               AKKE (Smart Command and Control Glove) is a wearable hand‑signal recognition system for silent, secure, real‑time team communication in tactical, rescue, and noisy industrial environments.
             </p>
             <p>
-              <strong>Hardware</strong>: ESP32‑S3 microcontroller; PCM5102 I2S DAC; FM transmitter (KT0803L/QN8066); flex and IMU sensors; microSD storage; 3.7 V Li‑ion power.
+              <strong>Hardware</strong>: ESP32 microcontrollers, 5 flex sensors, MPU6050 IMU sensor, ESP-NOW wireless communication, DFPlayer Mini audio module, LCD display, speaker/headphone output, 9V battery, voltage regulator, and power switch.
             </p>
             <p>
-              <strong>Software</strong>: On‑device ML gesture classifier; I2S digital audio pipeline (44.1 kHz, 16‑bit); encrypted wireless link; FM modulation for broadcast to standard radios.
+              <strong>Software</strong>: Sensor data acquisition using C++/Arduino IDE, gesture recognition with Edge Impulse/TinyML, command ID generation, ESP-NOW communication, receiver-side command processing, LCD display control, and DFPlayer Mini audio playback.
             </p>
             <p>
-              <strong>Use cases</strong>: Military operations, search‑and‑rescue, covert tasks, and loud industrial sites.
+              <strong>Use cases</strong>: Tactical team coordination, search-and-rescue operations, noisy industrial environments, and situations where silent or hands-free communication is required.
             </p>
             <p>
-              <strong>Targets</strong>: 50+ gestures at 75–80% accuracy; 25 beta gloves; mobile app v1.0; under 100 ms end‑to‑end latency.
+              <strong>Targets</strong>: Current prototype target: recognition and transmission of at least 5 predefined hand commands, reliable ESP-NOW communication between glove and receiver unit, LCD-based visual feedback, and audio feedback through DFPlayer Mini.
             </p>
             <p>
-              <strong>Supporters</strong>: HAVELSAN SUIT Program, SAYZEK Projects, TED University.
+              <strong>Project</strong>: Developed as a senior design project at TED University.
             </p>
             <p>
-              <strong>Technical</strong>: FM 88–108 MHz; 44.1 kHz sample rate; 16‑bit PCM WAV; I2S/I2C/SPI; 50+ m range with antenna optimization.
+              <strong>Technical</strong>: ESP32-based transmitter and receiver units; ESP-NOW wireless communication; 5 flex sensor inputs; MPU6050 IMU data through I2C; DFPlayer Mini audio playback through UART; LCD display through I2C; 9V battery with voltage regulation.
             </p>
           </div>
         </motion.div>

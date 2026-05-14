@@ -44,8 +44,17 @@ const ReportsSection = () => {
       description: 'Low-level design report detailing hardware-software mapping, interface contracts, module-level behaviors, and implementation-level decisions for AKKE.',
       fileName: 'CMPE492_AKKE_Low_Level_Design_Report.pdf',
       date: '2026',
-      type: 'Design'
-    }
+      type: 'Design',
+    },
+    {
+      id: 6,
+      title: 'Test Plan Report',
+      description:
+        'Test plan report describing verification strategy, test cases, acceptance criteria, and evaluation approach for the AKKE prototype system.',
+      fileName: 'CMPE492_AKKE_Test_Plan_Report.pdf',
+      date: '2026',
+      type: 'Testing',
+    },
   ]
 
   const handleView = (fileName) => {

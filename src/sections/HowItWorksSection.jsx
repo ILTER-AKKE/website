@@ -1,32 +1,41 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import Stepper from '../components/Stepper'
 
 const HowItWorksSection = () => {
   const prefersReducedMotion = useReducedMotion()
-  const [currentStep, setCurrentStep] = useState(0)
 
   const steps = [
     {
-      title: 'Sense hand signals',
-      description: 'Flex sensors and IMU capture finger bends and hand motion from the glove.',
-      details: 'High-rate sampling feeds structured features to the embedded controller in real time.',
+      title: 'Sense hand gestures',
+      description:
+        'Flex sensors and the MPU6050 IMU collect finger bending and hand motion data from the glove.',
     },
     {
-      title: 'Classify on ESP32‑S3',
-      description: 'An on-device ML model recognizes the gesture and maps it to a command.',
-      details: 'Targets; at least 5 commands with 75–80% accuracy; continuously improvable with new data.',
+      title: 'Classify the gesture',
+      description:
+        'The ESP32 processes sensor data and the Edge Impulse/TinyML model recognizes the performed gesture.',
     },
     {
-      title: 'Prepare audio prompt',
-      description: 'The corresponding audio file is read from the microSD storage.',
-      details: '16‑bit PCM WAV at 44.1 kHz is streamed via I2S as digital audio.',
+      title: 'Generate command ID',
+      description:
+        'The recognized gesture is mapped to a compact command ID such as Stop, Come, Go Go, Hurry Up, or Stick Together.',
     },
     {
-      title: 'Transmit over RF/FM',
-      description: 'I2S feeds the PCM5102 DAC; analog audio drives the FM transmitter (e.g., 88.5 MHz).',
-      details: 'Team radios receive the message simultaneously without line-of-sight.',
+      title: 'Send via ESP-NOW',
+      description:
+        'The command ID is transmitted wirelessly from the glove ESP32 to the receiver ESP32 using ESP-NOW.',
+    },
+    {
+      title: 'Process on receiver unit',
+      description:
+        'The receiver ESP32 reads the incoming command ID and determines the corresponding visual and audio feedback.',
+    },
+    {
+      title: 'Display and play feedback',
+      description:
+        'The command is shown on the LCD screen and the related voice command is played through DFPlayer Mini using a speaker or headphone output.',
     },
   ]
 
@@ -55,7 +64,7 @@ const HowItWorksSection = () => {
             className="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium mb-4"
             whileHover={{ scale: 1.05 }}
           >
-            End-to-end signal pipeline
+            Glove → receiver pipeline
           </motion.span>
           
           <h2 className="text-heading text-dark-900 dark:text-white mb-6 text-balance">
@@ -66,7 +75,8 @@ const HowItWorksSection = () => {
           </h2>
           
           <p className="text-body text-dark-600 dark:text-dark-300 max-w-3xl mx-auto text-balance">
-            AKKE delivers silent, secure team commands with sub‑100 ms latency from gesture to audio broadcast.
+            Sensor data on the glove becomes a compact command ID, sent over ESP-NOW to the receiver unit, which
+            then drives the LCD and DFPlayer Mini audio output.
           </p>
         </motion.div>
 
@@ -78,10 +88,10 @@ const HowItWorksSection = () => {
             whileInView="visible"
             viewport={{ once: true, margin: '-100px' }}
           >
-            <Stepper steps={steps} currentStep={currentStep} />
+            <Stepper steps={steps} staticTimeline />
           </motion.div>
 
-          {/* Visual Demo */}
+          {/* System status (hardware-oriented summary) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -90,191 +100,32 @@ const HowItWorksSection = () => {
             className="sticky top-24"
           >
             <div className="relative">
-              {/* Background */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-primary-600/20 rounded-3xl blur-3xl"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.3, 0.5, 0.3],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-400/15 to-primary-600/15 rounded-3xl blur-2xl" />
 
-              {/* Main Demo Area */}
-              <motion.div
-                className="relative z-10 bg-white dark:bg-dark-900 rounded-3xl shadow-2xl p-8 lg:p-10"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                {/* Step Indicator */}
-                <div className="flex justify-center mb-8">
-                  <div className="flex space-x-2">
-                    {steps.map((_, index) => (
-                      <motion.div
-                        key={index}
-                        className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                          index <= currentStep
-                            ? 'bg-primary-600'
-                            : 'bg-dark-200 dark:bg-dark-700'
-                        }`}
-                        whileHover={{ scale: 1.2 }}
-                        onClick={() => setCurrentStep(index)}
-                      />
-                    ))}
+              <div className="relative z-10 bg-white dark:bg-dark-900 rounded-3xl shadow-xl border border-gray-200/80 dark:border-dark-700 p-8 lg:p-10">
+                <h3 className="text-lg font-semibold text-dark-900 dark:text-white mb-6">System Status</h3>
+                <dl className="space-y-4 text-left">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 pb-4 border-b border-gray-100 dark:border-dark-700">
+                    <dt className="text-sm font-medium text-dark-600 dark:text-dark-300">Glove Unit</dt>
+                    <dd className="text-sm font-medium text-primary-600 dark:text-primary-400">Active</dd>
                   </div>
-                </div>
-
-                {/* Demo Content */}
-                <div className="aspect-square bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6">
-                  <motion.div
-                    className="text-center text-white"
-                    key={currentStep}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {/* Step-specific icons */}
-                    {currentStep === 0 && (
-                      <motion.div
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
-                        </svg>
-                        <p className="text-lg font-semibold">Glove Connected</p>
-                      </motion.div>
-                    )}
-                    
-                    {currentStep === 1 && (
-                      <motion.div
-                        animate={{ rotate: [0, 10, -10, 0] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                        <p className="text-lg font-semibold">Call Initiated</p>
-                      </motion.div>
-                    )}
-                    
-                    {currentStep === 2 && (
-                      <motion.div
-                        animate={{ y: [0, -10, 0] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                        <p className="text-lg font-semibold">Translating Signs</p>
-                      </motion.div>
-                    )}
-                    
-                    {currentStep === 3 && (
-                      <motion.div
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                        <p className="text-lg font-semibold">Speech Processing</p>
-                      </motion.div>
-                    )}
-                  </motion.div>
-                </div>
-
-                {/* Status Indicators */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-dark-600 dark:text-dark-300">Connection</span>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                      <span className="text-xs text-green-600 dark:text-green-400">Connected</span>
-                    </div>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 pb-4 border-b border-gray-100 dark:border-dark-700">
+                    <dt className="text-sm font-medium text-dark-600 dark:text-dark-300">Receiver Unit</dt>
+                    <dd className="text-sm font-medium text-dark-700 dark:text-dark-200">Waiting for Command</dd>
                   </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-dark-600 dark:text-dark-300">Call Status</span>
-                    <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${currentStep >= 1 ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`} />
-                      <span className={`text-xs ${currentStep >= 1 ? 'text-green-600 dark:text-green-400' : 'text-gray-500'}`}>
-                        {currentStep >= 1 ? 'Active' : 'Pending'}
-                      </span>
-                    </div>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 pb-4 border-b border-gray-100 dark:border-dark-700">
+                    <dt className="text-sm font-medium text-dark-600 dark:text-dark-300">Communication</dt>
+                    <dd className="text-sm font-medium text-dark-700 dark:text-dark-200">ESP-NOW</dd>
                   </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-dark-600 dark:text-dark-300">AI Translation</span>
-                    <div className="flex items-center space-x-2">
-                      <div className={`w-2 h-2 rounded-full ${currentStep >= 2 ? 'bg-blue-500 animate-pulse' : 'bg-gray-300'}`} />
-                      <span className={`text-xs ${currentStep >= 2 ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500'}`}>
-                        {currentStep >= 2 ? 'Active' : 'Inactive'}
-                      </span>
-                    </div>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
+                    <dt className="text-sm font-medium text-dark-600 dark:text-dark-300">Output</dt>
+                    <dd className="text-sm font-medium text-dark-700 dark:text-dark-200">LCD + Audio Feedback</dd>
                   </div>
-                </div>
-              </motion.div>
-
-              {/* Floating Elements */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full"
-                animate={{
-                  y: [0, -15, 0],
-                  rotate: [0, 180, 360],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-              
-              <motion.div
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full"
-                animate={{
-                  y: [0, 15, 0],
-                  rotate: [0, -180, -360],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
+                </dl>
+              </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Auto-advance demo */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <motion.button
-            className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm font-medium transition-colors duration-200"
-            onClick={() => {
-              const interval = setInterval(() => {
-                setCurrentStep(prev => {
-                  if (prev >= steps.length - 1) {
-                    clearInterval(interval)
-                    return 0
-                  }
-                  return prev + 1
-                })
-              }, 2000)
-            }}
-            whileHover={{ scale: 1.05 }}
-          >
-            ▶️ Auto-demo
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   )

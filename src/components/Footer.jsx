@@ -63,7 +63,7 @@ const Footer = () => {
                 <span className="text-xl font-bold">AKKE</span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed max-w-md">
-                Smart Command and Control Glove for silent, secure, real-time team communications over encrypted links and FM radio.
+                Smart Command and Control Glove for silent, real-time command communication using gesture recognition and ESP-NOW wireless transmission.
               </p>
             </motion.div>
 

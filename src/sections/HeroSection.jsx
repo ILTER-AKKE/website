@@ -72,7 +72,7 @@ const HeroSection = () => {
               variants={prefersReducedMotion ? {} : itemVariants}
               className="text-lg text-dark-600 dark:text-dark-300 leading-relaxed text-balance max-w-2xl"
             >
-              AKKE recognizes predefined hand signals and transmits commands over wireless links and FM radio, with low latency and no line-of-sight requirement.
+              AKKE recognizes predefined hand gestures and transmits command IDs to a receiver unit using ESP-NOW wireless communication, enabling fast and silent team communication without requiring voice commands.
             </motion.p>
 
             <motion.div

@@ -9,36 +9,44 @@ const FAQSection = () => {
   const faqs = [
     {
       question: 'What is AKKE?',
-      answer: 'AKKE (Smart Command and Control Glove) is a wearable hand‑signal recognition system enabling silent, secure, real‑time team communication for tactical, rescue, and industrial operations.'
+      answer:
+        'AKKE, Smart Command and Control Glove, is a wearable hand-signal recognition system designed for silent and fast command communication. The system recognizes predefined hand gestures and sends the corresponding command to a receiver unit using ESP-NOW wireless communication.',
     },
     {
       question: 'How does gesture recognition work?',
-      answer: 'Flex and IMU sensors capture finger bends and motion. An on‑device ML model on ESP32‑S3 classifies gestures and maps them to predefined commands.'
+      answer:
+        'Flex sensors placed along the fingers and an MPU6050 IMU sensor collect finger-bending and hand-motion data. The ESP32 processes this sensor data, and the gesture recognition model maps the detected movement to a predefined command.',
     },
     {
       question: 'How are commands delivered to the team?',
-      answer: 'The system plays a corresponding audio prompt from microSD, outputs I2S digital audio to a PCM5102 DAC, and feeds an FM transmitter for RF broadcast to standard radios.'
+      answer:
+        'Commands are not transmitted as audio or FM radio signals. Instead, the glove sends a compact command ID to the receiver unit using ESP-NOW. The receiver ESP32 processes the incoming command ID, displays the command on an LCD screen, and plays the corresponding voice feedback through the DFPlayer Mini audio module.',
     },
     {
       question: 'What latency does AKKE achieve?',
-      answer: 'End‑to‑end latency is targeted under 100 ms from gesture to audio broadcast.'
+      answer:
+        'AKKE is designed for low-latency command transmission using ESP-NOW. Exact end-to-end latency values will be determined through system testing and reported after evaluation.',
     },
     {
       question: 'What is the operational range?',
-      answer: 'With antenna optimization, range exceeds 50 meters in typical environments.'
+      answer:
+        'The operational range depends on ESP-NOW communication conditions, distance, obstacles, antenna placement, and the testing environment. The range will be evaluated through prototype testing instead of being claimed as a fixed value.',
     },
     {
       question: 'Is the communication secure?',
-      answer: 'AKKE uses an encrypted wireless channel for device communications and FM broadcast for team radios. Sensitive data remains on‑device.'
+      answer:
+        'The current prototype focuses on reliable ESP-NOW-based command transmission between the glove and the receiver unit. Additional security mechanisms, such as encryption or authentication, can be considered in future versions.',
     },
     {
       question: 'How many gestures are supported?',
-      answer: 'The target is 50+ gestures at 75–80% accuracy, expandable over time with new data.'
+      answer:
+        'The current prototype focuses on at least five predefined commands: Stop, Hurry Up, Go Go, Come, and Stick Together. The gesture set can be expanded in future iterations by collecting more data and improving the recognition model.',
     },
     {
       question: 'Which environments is AKKE designed for?',
-      answer: 'Military operations, search‑and‑rescue, covert missions, and loud industrial sites where speech is impractical or risky.'
-    }
+      answer:
+        'AKKE is designed for situations where voice communication is difficult, risky, or impractical, such as tactical team coordination, search-and-rescue operations, and noisy industrial environments.',
+    },
   ]
 
   const containerVariants = {

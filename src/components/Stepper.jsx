@@ -1,16 +1,19 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const Stepper = ({ steps, currentStep = 0 }) => {
+const Stepper = ({ steps, currentStep = 0, staticTimeline = false }) => {
+  const last = Math.max(steps.length - 1, 1)
+  const progressPercent = staticTimeline ? 100 : (currentStep / last) * 100
+
   return (
     <div className="relative">
       {/* Progress Line */}
       <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-dark-200 dark:bg-dark-700">
         <motion.div
           className="absolute top-0 left-0 w-full bg-primary-600 dark:bg-primary-400"
-          initial={{ height: 0 }}
-          animate={{ height: `${(currentStep / (steps.length - 1)) * 100}%` }}
-          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          initial={{ height: staticTimeline ? '100%' : 0 }}
+          animate={{ height: `${progressPercent}%` }}
+          transition={{ duration: staticTimeline ? 0 : 0.8, ease: 'easeInOut' }}
         />
       </div>
 
@@ -29,7 +32,7 @@ const Stepper = ({ steps, currentStep = 0 }) => {
             <div className="relative z-10 flex-shrink-0">
               <motion.div
                 className={`w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg ${
-                  index <= currentStep
+                  staticTimeline || index <= currentStep
                     ? 'bg-primary-600 dark:bg-primary-400'
                     : 'bg-dark-200 dark:bg-dark-700'
                 }`}
@@ -40,7 +43,7 @@ const Stepper = ({ steps, currentStep = 0 }) => {
               </motion.div>
               
               {/* Checkmark for completed steps */}
-              {index < currentStep && (
+              {!staticTimeline && index < currentStep && (
                 <motion.div
                   className="absolute inset-0 flex items-center justify-center"
                   initial={{ scale: 0, rotate: -180 }}

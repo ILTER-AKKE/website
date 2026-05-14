@@ -113,17 +113,19 @@ export const todos = [
     sprint: 'Sprint 4',
     id: 'T12',
     title: 'TinyML Model Design',
-    description: 'Determining the structure of the model (CNN/RNN) to be used for gesture classification.',
+    description:
+      'Determining the gesture recognition approach and preparing the Edge Impulse/TinyML model structure for sensor-based classification.',
     responsible: 'All Team',
     priority: 'High',
     dueDate: '15.01.2026',
-    status: 'Cancelled'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 4',
     id: 'T13',
-    title: 'Audio and RF Module Integration',
-    description: 'Testing audio playback via DFPlayer Mini and data transmission via RF.',
+    title: 'RF/FM Audio Broadcast Approach',
+    description:
+      'Initial RF/FM-based audio broadcast approach was evaluated and later removed from the system scope.',
     responsible: 'All Team',
     priority: 'High',
     dueDate: '15.01.2026',
@@ -142,12 +144,13 @@ export const todos = [
   {
     sprint: 'Sprint 5',
     id: 'T15',
-    title: 'Prototype Assembly',
-    description: 'Physical mounting of sensors and circuit components on the glove.',
+    title: 'Initial Prototype Assembly Attempt',
+    description:
+      'Initial mounting of sensors and circuit components on the glove; later revised during the soldering and repair phase.',
     responsible: 'All Team',
     priority: 'High',
     dueDate: '15.01.2026',
-    status: 'Cancelled'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 5',
@@ -177,7 +180,7 @@ export const todos = [
     responsible: 'All Team',
     priority: 'High',
     dueDate: '27.03.2026',
-    status: 'In Progress'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 6',
@@ -227,17 +230,17 @@ export const todos = [
     responsible: 'All Team',
     priority: 'High',
     dueDate: '15.04.2026',
-    status: 'In Progress'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 7',
     id: 'T24',
     title: 'TinyML Model Training',
     description: 'Developing and training the gesture classification model using the collected dataset.',
-    responsible: 'Abdullah / Berk',
+    responsible: 'Berk / Ömer',
     priority: 'High',
     dueDate: '15.04.2026',
-    status: 'Pending'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 7',
@@ -247,17 +250,17 @@ export const todos = [
     responsible: 'All Team',
     priority: 'High',
     dueDate: '10.04.2026',
-    status: 'Pending'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 8',
     id: 'T26',
     title: 'ESP-NOW Protocol Integration',
     description: 'Implementing the digital trigger communication between the glove and the receiver unit.',
-    responsible: 'Şevval',
+    responsible: 'All Team',
     priority: 'High',
     dueDate: '30.04.2026',
-    status: 'In Progress'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 8',
@@ -267,7 +270,7 @@ export const todos = [
     responsible: 'Şevval',
     priority: 'High',
     dueDate: '30.04.2026',
-    status: 'Pending'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 8',
@@ -277,7 +280,7 @@ export const todos = [
     responsible: 'All Team',
     priority: 'High',
     dueDate: '05.05.2026',
-    status: 'Pending'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 8',
@@ -287,7 +290,7 @@ export const todos = [
     responsible: 'Şevval',
     priority: 'High',
     dueDate: '30.04.2026',
-    status: 'Pending'
+    status: 'Completed'
   },
   {
     sprint: 'Sprint 9',
@@ -297,7 +300,7 @@ export const todos = [
     responsible: 'All Team',
     priority: 'High',
     dueDate: '15.05.2026',
-    status: 'Pending'
+    status: 'In Progress'
   },
   {
     sprint: 'Sprint 9',
@@ -307,7 +310,7 @@ export const todos = [
     responsible: 'All Team',
     priority: 'High',
     dueDate: '15.05.2026',
-    status: 'Pending'
+    status: 'In Progress'
   },
   {
     sprint: 'Sprint 9',
@@ -317,7 +320,7 @@ export const todos = [
     responsible: 'All Team',
     priority: 'Medium',
     dueDate: '15.05.2026',
-    status: 'Pending'
+    status: 'Completed'
   }
 ]
 

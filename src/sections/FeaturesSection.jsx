@@ -19,8 +19,8 @@ const FeaturesSection = () => {
     },
     {
       icon: '📱',
-      title: 'No line-of-sight',
-      description: 'Teams communicate without visual contact thanks to RF/FM transmission.',
+      title: 'Wireless command transmission',
+      description: 'Commands are transmitted from the glove to the receiver unit using ESP-NOW, without requiring voice communication.',
     },
     {
       icon: '⚡',
@@ -30,12 +30,12 @@ const FeaturesSection = () => {
     {
       icon: '🔊',
       title: 'Audio notifications',
-      description: 'Plays pre-recorded voice prompts from microSD and sends them to radios.',
+      description: 'The receiver unit plays pre-recorded voice prompts through DFPlayer Mini using speaker or headphone output.',
     },
     {
       icon: '📡',
-      title: 'Secure communications',
-      description: 'Encrypted wireless channel; FM transmitter for broadcast to standard radios.',
+      title: 'Wireless communication',
+      description: 'The glove sends compact command IDs to the receiver unit using ESP-NOW for fast and lightweight communication.',
     },
   ]
 
