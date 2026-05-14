@@ -130,7 +130,7 @@ const Footer = () => {
             © {currentYear} AKKE. All rights reserved.
           </p>
           <div className="flex items-center space-x-6 mt-4 sm:mt-0">
-            <span className="text-gray-400 text-sm">Bridging communication barriers</span>
+            <span className="text-gray-400 text-sm">Silent Commands, Instant Coordination.</span>
           </div>
         </motion.div>
       </div>
