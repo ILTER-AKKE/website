@@ -40,7 +40,7 @@ const FAQSection = () => {
     {
       question: 'How many gestures are supported?',
       answer:
-        'The current prototype focuses on at least five predefined commands: Stop, Hurry Up, Go Go, Come, and Stick Together. The gesture set can be expanded in future iterations by collecting more data and improving the recognition model.',
+        'The current prototype focuses on at least ten predefined commands: Stop, Listen, Go Go, Come, Stick Together, Slow down, Fall back, Take cover, Move right, and Move left. The gesture set can be expanded in future iterations by collecting more data and improving the recognition model.',
     },
     {
       question: 'Which environments is AKKE designed for?',
@@ -76,7 +76,7 @@ const FAQSection = () => {
           >
             Frequently Asked Questions
           </motion.span>
-          
+
           <h2 className="text-heading text-dark-900 dark:text-white mb-6 text-balance">
             Got{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">
@@ -84,7 +84,7 @@ const FAQSection = () => {
             </span>{' '}
             We Have Answers
           </h2>
-          
+
           <p className="text-body text-dark-600 dark:text-dark-300 max-w-3xl mx-auto text-balance">
             Find answers to the most common questions about AKKE. Can't find what you're looking for? Contact our support team.
           </p>

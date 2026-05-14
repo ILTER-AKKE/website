@@ -110,7 +110,7 @@ const HeroSection = () => {
                 ease: 'easeInOut',
               }}
             />
-            
+
             {/* Main Logo Image */}
             <motion.div
               className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 flex items-center justify-center"

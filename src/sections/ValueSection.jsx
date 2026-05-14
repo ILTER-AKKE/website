@@ -62,7 +62,7 @@ const ValueSection = () => {
           <h2 className="text-heading text-dark-900 dark:text-white mb-8 text-balance">
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">AKKE</span>
           </h2>
-          
+
           <div className="space-y-6 text-body text-dark-600 dark:text-dark-300 leading-relaxed text-left">
             <p>
               AKKE (Smart Command and Control Glove) is a wearable hand‑signal recognition system for silent, secure, real‑time team communication in tactical, rescue, and noisy industrial environments.
@@ -77,7 +77,7 @@ const ValueSection = () => {
               <strong>Use cases</strong>: Tactical team coordination, search-and-rescue operations, noisy industrial environments, and situations where silent or hands-free communication is required.
             </p>
             <p>
-              <strong>Targets</strong>: Current prototype target: recognition and transmission of at least 5 predefined hand commands, reliable ESP-NOW communication between glove and receiver unit, LCD-based visual feedback, and audio feedback through DFPlayer Mini.
+              <strong>Current prototype target</strong>: Recognition and transmission of at least 10 predefined hand commands, reliable ESP-NOW communication between glove and receiver unit, LCD-based visual feedback, and audio feedback through DFPlayer Mini.
             </p>
             <p>
               <strong>Project</strong>: Developed as a senior design project at TED University.
